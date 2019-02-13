@@ -1,5 +1,13 @@
 import React from 'react';
-import {Link, BrowserRouter} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
+
+const homeLink = (props) => {
+  props.history.push("/")
+}
+
+const skillsLink = (props) => {
+  props.history.push("/skills")
+}
 
 const Header = (props) => {
   return (
@@ -13,21 +21,19 @@ const Header = (props) => {
             <span></span>
             <span></span>
             <span></span>
-            <BrowserRouter>
-
               <ul className="navmap">
-                <li><Link to="/about"/>About</li>
-                <li><Link to="/skills"/>Skills</li>
-                <li><Link to="/portfolio"/>Portfolio</li>
-                <li><Link to="/blog"/>Blog</li>
-                <li><Link to="/contact"/>Contact</li>
+                <li><Link to="/">About</Link></li>
+                <li><Link to="/skills" >Skills</Link></li>
+                <li><Link to="/portfolio" >Portfolio</Link></li>
+                <li><Link to="/blog" >Blog</Link></li>
+                <li><Link to="/contact" >Contact</Link></li>
+                {/* <li><a onCLick={homeLink}>About</a></li>
+                <li><a onCLick={skillsLink}>Skills</a></li> */}
               </ul>
-            </BrowserRouter>
-
         </div>
       </div>
     </header>
   )
 }
 
-export default Header;
+export default withRouter(Header);
