@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel:700|Fauna+One");
+body {
+  width: 100vw;
+  background-color: #e3effd;
+  font-family: "Fauna One", cursive;
+  color: #404968; }
+
+p {
+  margin: 0; }
+
+h2 {
+  font-family: "Fauna One", cursive; }
+
+.flexbox {
+  position: fixed;
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(153, 205, 251, 0.7);
+  z-index: 1;
+  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
+  .flexbox img {
+    width: 70px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1; }
+  .flexbox .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 5%; }
+    .flexbox .dropdown span {
+      position: relative;
+      display: block;
+      height: 4px;
+      width: 40px;
+      background-color: #404968;
+      z-index: 2;
+      opacity: 1;
+      margin-bottom: 5px;
+      transition: all 0.4s ease; }
+    .flexbox .dropdown .hamburger {
+      opacity: 1;
+      right: 0;
+      top: 0;
+      z-index: 3; }
+    .flexbox .dropdown .navmap {
+      opacity: 0;
+      text-align: center;
+      list-style: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 2;
+      transition: all 0.4s ease; }
+      .flexbox .dropdown .navmap li {
+        display: inline-block;
+        padding: 20px;
+        width: 100%;
+        background: #74A2E7;
+        border: 4px groove rgba(195, 221, 244, 0.7); }
+      .flexbox .dropdown .navmap a {
+        margin: 20px;
+        padding: 20px;
+        text-decoration: none;
+        width: 100%;
+        font-size: 24px;
+        color: #e3effd;
+        text-shadow: 1px 1px 1px black; }
+  .flexbox input[type="checkbox"] {
+    opacity: 0;
+    background: black;
+    height: 70px;
+    width: 70px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    top: -25px;
+    right: 11px;
+    -webkit-touch-callout: none; }
+  .flexbox input:checked ~ .navmap {
+    opacity: 1;
+    transform: translate(-80%, 0%); }
+  .flexbox input:checked ~ span:nth-of-type(1) {
+    transform-origin: 0% 0%;
+    transform: translate(2px, -5px) rotate(45deg); }
+  .flexbox input:checked ~ span:nth-of-type(2) {
+    opacity: 0; }
+  .flexbox input:checked ~ span:nth-of-type(3) {
+    transform-origin: 0% 100%;
+    transform: translate(1px, 4px) rotate(-45deg); }
+
+.title-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/jagged-mountain2.JPG");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 600px;
+  padding-top: 20%;
+  font-family: "Cinzel", Arial, Helvetica, sans-serif;
+  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
+  .title-page .preamble {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #C3DDF4;
+    font-size: 44px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #404968, 2px 2px 3px #404968, 2px 2px 3px #404968;
+    min-width: 450px;
+    width: 100%;
+    padding: 0%;
+    margin: 0; }
+    .title-page .preamble p:nth-of-type(1) {
+      order: 2;
+      margin: 0;
+      color: #5170A8; }
+    .title-page .preamble p:nth-of-type(2) {
+      order: 3;
+      margin: 0; }
+    .title-page .preamble p:nth-of-type(3) {
+      order: 4;
+      margin: 0; }
+    .title-page .preamble img {
+      width: 300px;
+      order: 1; }
+
+#skills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-top: 5%; }
+  #skills .card {
+    min-width: 300px;
+    height: 300px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #99cdfb;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px 4px rgba(64, 73, 104, 0.5);
+    transition: all 0.3s linear; }
+    #skills .card p {
+      margin: 10%;
+      width: 260px;
+      padding: 5px;
+      height: 500px;
+      background: #C3DDF4; }
+    #skills .card img {
+      background: #C3DDF4;
+      padding: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin: 3%; }
+    #skills .card:hover {
+      box-shadow: 7px 7px 8px 5px rgba(64, 73, 104, 0.5);
+      transform: scale(1.02, 1.02); }
+
+.picture {
+  background: url("./images/snowy-valley.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 600px;
+  width: 100%;
+  display: grid;
+  grid-row: repeat(3, 33%);
+  text-align: center;
+  color: #C3DDF4;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black;
+  box-shadow: 3px 3px 3px 5px rgba(64, 73, 104, 0.5);
+  font-family: 'Fauna one', cursive; }
+  .picture a {
+    color: #e3effd;
+    text-decoration: none;
+    font-family: "Cinzel", cursive; }
+    .picture a:hover {
+      transform: scale(0.2, 0.2);
+      text-shadow: 4px 4px 4px black; }
+  .picture .picture-heading {
+    font-size: 32px;
+    font-family: "Cinzel", cursive;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px black; }
+  .picture .box1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box1 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
+      .picture .box1 .box-content h2 {
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box1 .box-content p {
+        display: none;
+        opacity: 0;
+        margin: 0;
+        padding-top: 5%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box1:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid #e3effd;
+      transform: scale(1.02, 1.02); }
+    .picture .box1:hover p {
+      display: block;
+      opacity: 1;
+      background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box1:hover h2 {
+      background-color: #404968; }
+  .picture .box2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box2 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
+      .picture .box2 .box-content h2 {
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box2 .box-content p {
+        display: none;
+        opacity: 0;
+        margin: 0;
+        padding-top: 5%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box2:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid #e3effd;
+      transform: scale(1.02, 1.02); }
+    .picture .box2:hover p {
+      display: block;
+      opacity: 1;
+      background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box2:hover h2 {
+      background-color: #404968; }
+  .picture .box3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box3 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
+      .picture .box3 .box-content h2 {
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box3 .box-content p {
+        display: none;
+        opacity: 0;
+        margin: 0;
+        padding-top: 5%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box3:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid #e3effd;
+      transform: scale(1.02, 1.02); }
+    .picture .box3:hover p {
+      display: block;
+      opacity: 1;
+      background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box3:hover h2 {
+      background-color: #404968; }
+
+.blog {
+  padding: 10%;
+  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: auto;
+  text-align: center; }
+  .contact-container .profile {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%; }
+  .contact-container p {
+    padding: 5%; }
+
+.picture2 {
+  background-image: url("./images/birds-flying.JPG");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  box-shadow: 4px 4px 4px 4px #404968; }
+  .picture2 h2 {
+    color: #C3DDF4;
+    font-size: 32px;
+    font-family: "Fauna One", cursive;
+    text-shadow: 2px 2px 2px #404968;
+    padding-top: 200px; }
+    .picture2 h2 span {
+      color: #99cdfb;
+      font-family: 'Cinzel', cursive; }
+
+footer {
+  background: #404968;
+  color: #e3effd; }
+
+@media (min-width: 1000px) {
+  .title-page {
+    padding-top: 0; }
+
+  .flexbox .dropdown span {
+    opacity: 0; }
+
+  input {
+    display: none; }
+
+  .flexbox .dropdown .navmap {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    opacity: 1;
+    transform: translate(0, 0);
+    width: 100%;
+    padding-bottom: 21px; }
+    .flexbox .dropdown .navmap li {
+      z-index: inherit;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin: 4px;
+      border: 0px;
+      border-radius: 20px; }
+      .flexbox .dropdown .navmap li:hover {
+        background: #5170A8; }
+      .flexbox .dropdown .navmap li a {
+        text-align: left;
+        padding: 0; } }
+
+/*# sourceMappingURL=main.css.map */
