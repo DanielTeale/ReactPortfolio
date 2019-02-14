@@ -7,16 +7,16 @@ const SkillsPage = (props) => {
   return (
     <section id="skills">
       <div className="card card-one">
-        <img src={Desktop} alt="Desktop Computer Picture" />
+        <img src={Desktop} alt="Desktop Computer" />
           <p>Rich experience with and a passion for all things technical from a life-time of exposure</p>
       </div>
         <div className="card card-two">
-          <img src={Apple} alt="Apple iOS Picture" />
+          <img src={Apple} alt="Apple iOS" />
             <p>Former Apple Technician, experience in Macintosh and iOS hardware and software repair</p>
       </div>
           <div className="card card-three">
-            <img src={Reading} alt="Reading Picture" />
-              <p>Current student at Coder Academy coder Bootcamp. Studying Ruby on Rails, HTML/CSS and Full Stack Javascript</p>
+            <img src={Reading} alt="Reading" />
+              <p>Graduate of the Fast Track Bootcamp at Coder Academy and avid coder</p>
       </div>
     </section>
   )

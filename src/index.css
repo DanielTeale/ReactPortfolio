@@ -20,7 +20,9 @@ h2 {
   align-items: center;
   background: rgba(153, 205, 251, 0.7);
   z-index: 1;
-  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
+  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5);
+  top: 0;
+  left: 0;}
   .flexbox img {
     width: 70px;
     overflow: hidden;
@@ -106,6 +108,8 @@ h2 {
   width: 100%;
   min-height: 600px;
   padding-top: 20%;
+  margin-top: 96px;
+  margin-bottom: 52px; 
   font-family: "Cinzel", Arial, Helvetica, sans-serif;
   box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
   .title-page .preamble {
@@ -142,7 +146,7 @@ h2 {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 100%;
-  margin-top: 5%; }
+  margin-top: 96px; }
   #skills .card {
     min-width: 300px;
     height: 300px;
@@ -183,7 +187,9 @@ h2 {
   color: #C3DDF4;
   text-shadow: 1px 1px 1px black, 1px 1px 1px black;
   box-shadow: 3px 3px 3px 5px rgba(64, 73, 104, 0.5);
-  font-family: 'Fauna one', cursive; }
+  font-family: 'Fauna one', cursive;
+  margin-top: 92px;
+  left: 0; }
   .picture a {
     color: #e3effd;
     text-decoration: none;
@@ -321,6 +327,7 @@ h2 {
   justify-content: center;
   width: 400px;
   margin: auto;
+  margin-top: 64px;
   text-align: center; }
   .contact-container .profile {
     width: 400px;
@@ -337,6 +344,7 @@ h2 {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
+  margin-top: 256px;
   box-shadow: 4px 4px 4px 4px #404968; }
   .picture2 h2 {
     color: #C3DDF4;
@@ -350,7 +358,8 @@ h2 {
 
 footer {
   background: #404968;
-  color: #e3effd; }
+  color: #e3effd;
+  text-align: center; }
 
 @media (min-width: 1000px) {
   .title-page {

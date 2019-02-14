@@ -1,15 +1,19 @@
 import React from 'react';
+import Logo from "../../images/logo.png";
 
 const HomePage = (props) => {
   return (
     <article className="title-page" id="about">
-      <div className="preamble"><p>Daniel Teale: </p><p>Full Stack Javascript and Ruby on Rails Developer</p>
+      <section className="preamble"><p>Daniel Teale: </p><p>Full Stack Javascript and Ruby on Rails Developer</p>
         <p>
         </p>
         <p>
-          <img src="./images/logo.png" alt="" /><br />
+          <img src={Logo} alt="DT logo" /><br />
         </p>
-      </div>
+      </section>
+      <section className="picture2">
+        <h2>“Technology is best when it brings people together.” <span>Matt Mullenweg, Social Media Entrepreneur</span></h2>
+      </section>
     </article>
   )
 }

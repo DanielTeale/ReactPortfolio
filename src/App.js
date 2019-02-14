@@ -6,8 +6,8 @@ import SkillsPage from "./components/pages/SkillsPage"
 import PortfolioPage from "./components/pages/PortfolioPage"
 import BlogPage from "./components/pages/BlogPage"
 import ContactPage from "./components/pages/ContactPage"
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/structure/Footer';
 
 class App extends Component {
   render() {
@@ -19,8 +19,9 @@ class App extends Component {
             <Route exact path="/" component={HomePage}/>
             <Route exact path="/skills" component={SkillsPage}/>
             <Route exact path="/portfolio" component={PortfolioPage}/>
-            <Route exact path="/blog" component={BlogPage}/>
+            {/* <Route exact path="/blog" component={BlogPage}/> */}
             <Route exact path="/contact" component={ContactPage}/>
+            <Footer/>
           </div>
         </BrowserRouter>
       </>
